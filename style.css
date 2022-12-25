@@ -1,0 +1,159 @@
+body {
+  background-color: #f0efeb;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+}
+
+h1 {
+  position: absolute;
+}
+
+.base {
+  position: absolute;
+  top: 300px;
+  height: 100px;
+  width: 200px;
+  background-color: grey;
+  border-radius: 50%;
+}
+
+.layer {
+  position: absolute;
+  top: 300px;
+  /* margin-top: 280px; */
+  height: 50px;
+  width: 185px;
+  background-color: brown;
+}
+
+.layer2 {
+  position: absolute;
+  top: 300px;
+  height: 90px;
+  width: 185px;
+  border-radius: 50%;
+  background-color: brown;
+}
+
+.layer-top {
+   top: 240px;
+}
+
+
+
+.cream {
+  position: absolute;
+  top: 250px;
+  height: 90px;
+  width: 185px;
+  border-radius: 50%;
+  background-color: yellow;
+}
+.cream2 {
+  position: absolute;
+  top: 290px;
+  height: 10px;
+  width: 185px;
+  /* border-radius: 50%; */
+  background-color: yellow;
+}
+
+.cream-top {
+  top: 190px;
+}
+
+.candle {
+  position: absolute;
+  width: 10px;
+  height:40px;
+  background: repeating-linear-gradient(#fae0e4,
+  #fae0e4 5px, #ff0a54 5px, #ff0a54 10px);
+  box-shadow: inset -5px 0px rgba(0,0,0,0.1);
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+
+}
+
+.candle-top {
+  top: 220px;
+
+}
+
+.candle-left {
+  top: 200px;
+  margin-left: 90px;
+}
+
+.candle-right {
+  top: 200px;
+  margin-right: 90px;
+}
+
+.container {
+  position: absolute;
+  transform: translate(-55px,0px);
+}
+
+.flame, .flame:before, .flame2, .flame2:before, .flame3, .flame3:before {
+  position: absolute;
+
+  border-radius: 80% 15% 55% 50% / 55% 15% 80% 50%;
+}
+
+.flame,.flame3, .flame2 {
+  cursor: pointer;
+  width:20px;
+  height: 20px;
+  transform: rotate(-45deg);
+
+  z-index:4;
+  background-color: rgba(252,191,73,.8);
+  transition: .5s;
+  animation: flame .5s infinite;
+}
+
+.flame {
+  top:160px;
+  margin-left: 45px;
+}
+
+.flame2, .flame3 {
+  top: 140px;
+}
+
+.flame2 {
+  margin-left:90px;
+}
+
+.flame3 {
+  /* margin-left: 80px; */
+  /* margin-left: 25px; */
+  /* margin-right: 50px; */
+}
+
+.flame:before, .flame2:before, .flame3:before {
+  content:"";
+  background-color: rgba(247,127,0,.4);
+  width:10px;
+  height:10px;
+  top:5px;
+  left:5px;
+}
+
+
+@keyframes flame {
+  0%, 25%, 100% {transform: scaleY(1) rotate(-45deg);}
+  50%, 75% {transform: scaleY(1.1) rotate(-45deg);}
+}
+
+.text {
+  /* width:350px;
+  font-size: 50px;
+  left:-140px;
+  top:100px;
+  z-index:-1;
+  transition: .3s; */
+  font-size: 50px;
+  opacity:0;
+}
