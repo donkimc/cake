@@ -3,10 +3,17 @@ body {
   display: flex;
   justify-content:center;
   align-items: center;
+  background-color: #f07167;
+  overflow: hidden;
+  font-family: "Mountains of Christmas";
 }
 
 h1 {
   position: absolute;
+  overflow: hidden;
+  top: 400px;
+  color: white;
+
 }
 
 .base {
@@ -114,12 +121,12 @@ h1 {
 }
 
 .flame {
-  top:160px;
+  top:130px;
   margin-left: 45px;
 }
 
 .flame2, .flame3 {
-  top: 140px;
+  top: 110px;
 }
 
 .flame2 {
@@ -147,13 +154,47 @@ h1 {
   50%, 75% {transform: scaleY(1.1) rotate(-45deg);}
 }
 
-.text {
-  /* width:350px;
+/* .text {
+  font-weight: 700;
   font-size: 50px;
-  left:-140px;
-  top:100px;
-  z-index:-1;
-  transition: .3s; */
-  font-size: 30px;
+  background-image: repeating-linear-gradient(to right, indigo, blue, green, yellow, red);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+} */
+
+.text {
+  margin-top: 0px;
+  margin-bottom: 50px;
+  text-align: center;
+  /* font-family: sans-serif; */
+  font-size: 3rem;
+  letter-spacing: 0.15rem;
+  text-transform: uppercase;
+  color: #fff;
+  text-shadow: -4px 4px #ef3550,
+               -6px 6px #7e57c2,
+               -8px 8px #43a047,
+               -10px 10px #f9a825,
+               -12px 12px #ff5722;
   opacity:0;
+  animation: color-change 1s infinite;
+}
+
+@keyframes color-change {
+  0% { text-shadow: -4px 4px black,
+                   -6px 6px blue,
+                   -8px 8px red,
+                   -10px 10px yellow,
+                   -12px 12px green; }
+  50% { text-shadow: -4px 4px blue,
+                   -6px 6px red,
+                   -8px 8px yellow,
+                   -10px 10px green,
+                   -12px 12px black; }
+  100% { text-shadow: -4px 4px red,
+                   -6px 6px yellow,
+                   -8px 8px green,
+                   -10px 10px black,
+                   -12px 12px blue; }
 }
