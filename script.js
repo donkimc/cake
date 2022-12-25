@@ -26,6 +26,7 @@ $(document).ready( function() {
   function check() {
     if (f&&f2&&f3) {
       $("h1").css("display", "none");
+      $(".text").css("display","inline");
       $(".text").animate({"top": -90, "opacity": 1}, "fast");
     }
   }
